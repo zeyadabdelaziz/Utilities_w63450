@@ -1,0 +1,30 @@
+public static class StringUtilities
+{
+    // Here you can define static methods and properties that operate on strings
+    
+    public static bool IsPalindrome(string str)
+    {
+        if (string.IsNullOrEmpty(str))
+        {
+            return false;
+        }
+        
+        int left = 0;
+        int right = str.Length - 1;
+        
+        while (left < right)
+        {
+            if (str[left] != str[right])
+            {
+                return false;
+            }
+            
+            left++;
+            right--;
+        }
+        
+        return true;
+    }
+    
+    // Add more methods as needed
+}
